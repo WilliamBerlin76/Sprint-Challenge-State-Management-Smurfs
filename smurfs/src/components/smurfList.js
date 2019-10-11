@@ -33,6 +33,7 @@ const SmurfList = (props) => {
 
     const submitSmurf = e => {
         props.postSmurfs(newSmurf)
+        setNewSmurf({name: '', age: '', height: ''})
     }
     return(
         <>
