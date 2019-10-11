@@ -4,7 +4,7 @@ export const START_FETCHING = 'START_FETCHING';
 export const FETCH_SUCCESS = 'FETCH_SUCCESS';
 export const FETCH_FAILURE = 'FETCH_FAILURE';
 
-export const START_POST = 'START_POST';
+export const POST = 'POST';
 
 
 export const fetchSmurfs = () => dispatch => {
@@ -26,6 +26,7 @@ export const postSmurfs = (newSmurf) => dispatch => {
     .post('http://localhost:3333/smurfs', newSmurf)
     .then(res => {
         console.log(res)
+        dispatch({type: POST, payload: res.data})
     })
     .catch(err => {
             console.log("post failed", err)
