@@ -6,7 +6,7 @@ import {postSmurfs} from '../actions/actions';
 const SmurfList = (props) => {
     const [newSmurf, setNewSmurf] = useState({
                                         name: '',
-                                        age: null,
+                                        age: '',
                                         height: ''
                                     })
                                     
@@ -65,8 +65,8 @@ const SmurfList = (props) => {
                 return(
                     <div className='smurf-card' key={item.name}>
                         <h3>{item.name}</h3>
-                        <p>{item.age}</p>
-                        <p>{item.height}</p>
+                        <p>{item.age} Years Old</p>
+                        <p>{item.height} Tall</p>
                     </div>
                 )
             })}

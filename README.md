@@ -24,22 +24,23 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What problem does the context API help solve?
 
-    It allows easier access to state without having to always pass props down different branches
+    It allows easier access to data across the app without having to always pass props down different branches
 
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
 
-    actions are the events that trigger the cases, "reducers" handle state, "store" store the state and data
+    'actions' are the events that trigger the cases, "reducers" handle and manipulate state, and "store" holds the state for the entire app. dispatching an action to the store is the only way to change the state inside of it, which is why it is know as a 'single source of truth'.
 
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
 
-    application state can be accessed app wide, while component state can be altered within the components
+    application state can be accessed app wide, while component state can be seen and altered within the components
 
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
 
-
+    redux-thunk can look at what is returned when an action creater is called, can forward actions to the reducer, and can invoke functions and can pass the dispatch function in as an argument. 
 
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
 
+    I like redux the most, because I feel like it is the most organized and stable option. The more I use it, the more I can understand how usefull it can be especially in larger applications
 
 
 ## Project Set Up
